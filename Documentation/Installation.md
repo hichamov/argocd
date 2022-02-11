@@ -49,3 +49,4 @@ kubectl get svc | grep -i argocd-dashboard-nodeport | awk '{print $5}' | cut -d 
 You can access the dashboard via an ip of any cluster instance, and the nodeport we've just retrieved.
 
 The username is admin and the password is stored in `argocd-initial-admin-secret` secret.
+
