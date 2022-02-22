@@ -13,3 +13,5 @@ What will be covered in this document
 * [Deploying to multiple clusters](./Documentation/multiple-clusters.md)
 
 * [Monitoring ArgoCD](./Documentation/monitoring.md)
+
+* [Application of applications pattern](./Documentation/app-of-apps.md)
