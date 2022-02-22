@@ -13,4 +13,4 @@ spec:
   source:
     path: hello-world
     repoURL: https://github.com/hichamov/helm-hello-world.git
-    targetRevision: HEAD
+    targetRevision: main
