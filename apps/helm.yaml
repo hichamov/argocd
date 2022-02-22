@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: python-hello-world
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: hello
+    name: in-cluster
+  project: default
+  source:
+    path: manifests
+    repoURL: https://github.com/hichamov/python-helloworld.git
+    targetRevision: HEAD
