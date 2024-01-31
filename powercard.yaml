@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: powercard
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    repoURL: 'https://10.1.90.1/scm/pwcv4/pwc-k8s-v4.git'
+    path: charts/pwc-online
+    targetRevision: add-new-casa-dev-values-file
+    helm:
+      valueFiles:
+        - values-casa-cluster.yaml
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: onl-dev
+  syncPolicy:
+    automated:
+      selfHeal: true
+
